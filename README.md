@@ -16,4 +16,4 @@ Learn more about [how to use a theme](https://sli.dev/themes/use).
 
 ## ScreenShots
 
-![preview](./docs/preview.jpg)
+![preview](https://github.com/SoonIter/slidev-theme-flyingstudio/blob/master/docs/preview.jpg?raw=true)

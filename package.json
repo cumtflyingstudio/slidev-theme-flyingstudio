@@ -1,6 +1,15 @@
 {
   "name": "slidev-theme-flyingstudio",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "flyingstudio`s theme for Slidev.",
+  "author": {
+    "name": "SoonIter",
+    "email": "1730214056@qq.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "slidev-theme",
     "slidev"
@@ -13,7 +22,8 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "screenshot": "slidev export example.md --format png",
+    "release": "nr build && npx bumpp patch --commit '🔖v' && npm publish"
   },
   "dependencies": {
     "@slidev/types": "^0.36.4",
@@ -24,8 +34,8 @@
   "devDependencies": {
     "@slidev/cli": "^0.36.4",
     "playwright-chromium": "^1.25.2",
-    "scss": "^0.2.4",
-    "bumpp": "^8.2.1"
+    "bumpp": "^8.2.1",
+    "@antfu/ni": "^0.18.0"
   },
   "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
   "slidev": {
