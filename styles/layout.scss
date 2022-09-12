@@ -1,0 +1,94 @@
+:root {
+  /* // default theme color */
+  /* // can be by uses `themeConfig` option */
+  --slidev-theme-primary: #5d8392;
+  --flying-studio-green: #4af6de;
+}
+html.light {
+  color: #404040;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --geist-background: red;
+}
+html.dark {
+  --geist-background: #000;
+}
+
+// 前导模块
+h1,
+h2 {
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 0.5em;
+    margin-right: 0.25em;
+    background: var(--flying-studio-green);
+    transform: translateY(0.1em);
+  }
+}
+
+// 背景图
+.slidev-layout {
+  // &.cover::before {
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   width: 500px;
+  //   height: 500px;
+  //   bottom: 50%;
+  //   left: 70%;
+  //   opacity: 0.1;
+  //   z-index: 100;
+  //   transform: translate(-50%, 50%);
+  //   background: no-repeat url('../imgs/flying.png');
+  //   background-size: contain;
+  // }
+  &:not(.cover)::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 500px;
+    bottom: 50%;
+    left: 70%;
+    opacity: 0.1;
+    z-index: 100;
+    transform: translate(-50%, 50%);
+    background: no-repeat url('../imgs/flying.png');
+    background-size: contain;
+  }
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-5xl leading-20 mx-20 mb-20 font-normal;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 3em;
+      height: 2em;
+      background: no-repeat url('../imgs/flying.png');
+      background-size: contain;
+    }
+  }
+
+  h2 {
+    @apply text-2xl font-normal;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
